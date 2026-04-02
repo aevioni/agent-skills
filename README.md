@@ -8,11 +8,11 @@ npx skills add weiran-tech/agent-skills --skill nuxt3-qa-analysis
 
 ```
 # Nuxt / 前端
-| nuxt3-qa-analysis | Nuxt3 项目分析 |
+nuxt3-qa-analysis              : Nuxt3 项目分析
 
 # Weiran 框架
-| weiran-openapi-writer | OpenAPI 文档写作 |
-| weiran-project-qa-analysis | 项目分析 |
+weiran-openapi-writer          : OpenAPI 文档写作
+weiran-project-qa-analysis     : 项目分析
 
 # 其他
 ```
