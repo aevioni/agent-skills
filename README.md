@@ -14,6 +14,9 @@ nuxt3-qa-analysis              : Nuxt3 项目分析
 weiran-openapi-writer          : OpenAPI 文档写作
 weiran-project-qa-analysis     : 项目分析
 
+# 工作流
+weiran-feature-module-workflow  : 功能模块全流程开发工作流（文档驱动七阶段）
+
 # 其他
 ```
 
