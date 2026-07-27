@@ -41,6 +41,7 @@ description: 单体多模块项目的需求开发全流程编排。状态机驱�
 /devops-workflow rework [需求ID]             # 设计/实现缺陷返工：按根因层级回退并级联重做
 /devops-workflow followup {已完成需求ID} [新需求名]  # 基于已完成需求发起新需求（继承设计上下文）
 /devops-workflow summary [需求ID]            # 产出交付清单（DDL / Job·MQ / API）给 DBA 与前端
+/devops-workflow fix {bug描述}                # 轻量 bug 修复（定位→编码→CR，不走 5 阶段）
 /devops-workflow config                      # 查看/初始化/更新 .workflow-config 配置（缺失项自动补全）
 ```
 
@@ -104,6 +105,7 @@ description: 单体多模块项目的需求开发全流程编排。状态机驱�
 | 阶段 4 CR 扫描与裁决（CR + 人工门 + 同步 + 改写） | `references/stages/stage-4.2-cr.md` |
 | 阶段 5 收尾验收 + 异常处理 | `references/stages/stage-5-accept.md` |
 | **独立命令** | |
+| `/devops-workflow fix` 轻量 bug 修复 | `references/commands/fix.md` |
 | `/devops-workflow rework` 返工 | `references/commands/rework.md` |
 | `/devops-workflow followup` 基于已完成需求发起新需求 | `references/commands/followup.md` |
 | `/devops-workflow config` 初始化/合并流程配置 | `references/commands/config.md` |

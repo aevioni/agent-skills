@@ -71,6 +71,9 @@
 ## `/devops-workflow list`
 扫描 `{讨论根目录}` 下所有 `.task/progress.md`，只显示**未完成**的需求（状态不是 COMPLETED）。多里程碑需求在条目下附各里程碑一行简况。
 
+## `/devops-workflow fix {bug描述}`
+轻量 bug 修复，不走 5 阶段状态机。**详见 `commands/fix.md`。**
+
 ## `/devops-workflow rework [需求ID][#里程碑]`
 设计/实现缺陷返工 —— **详见 `commands/rework.md`**。
 
