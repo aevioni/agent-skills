@@ -6,7 +6,7 @@
 
 ## 复杂度与 plan 的关系
 
-每个任务编码前，按 dev-tasks 标注的复杂度（或 Claude 自行评估）判定为三级之一（判定标准见 `automation.md「simple_task_skip_cr 协议」`）：
+每个任务编码前，按 dev-tasks 标注的复杂度（或 Claude 自行评估）判定为三级之一（判定标准见 `protocols/automation.md「simple_task_skip_cr 协议」`）：
 
 - **简单任务**：直接编码，不出 plan，不走 CR（需 `simple_task_skip_cr=true`）。
 - **普通任务**：直接编码，不出 plan，走完整 CR 闭环。
