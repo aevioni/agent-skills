@@ -103,4 +103,4 @@ executor "
 
 ### 回写完成后——自动流转
 
-> 按 automation.md「auto_advance 协议」处理：auto_advance=true 时自动取下一个 TODO 任务或自动进入阶段 5 验收，否则提示 `/devops-workflow next`。
+> 按 protocols/automation.md「auto_advance 协议」处理：auto_advance=true 时自动取下一个 TODO 任务或自动进入阶段 5 验收，否则提示 `/devops-workflow next`。

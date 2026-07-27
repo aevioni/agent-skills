@@ -1,6 +1,6 @@
 # 阶段 4：开发与逐任务审查（DEVELOPING）
 
-> 执行阶段 4 前读本文件。plan 细节见 `stage-4.1-plan.md`，CR 细节见 `stage-4.2-cr.md`。产出物根路径见 templates.md。
+> 执行阶段 4 前读本文件。plan 细节见 `stage-4.1-plan.md`，CR 细节见 `stage-4.2-cr.md`。产出物根路径见 protocols/templates.md。
 
 **工单目录基准**：`{讨论根目录}{域}/{需求名}/.task/`。本文件及 stage-4.1/4.2 中所有 `.task/` 路径（如 `.task/done/`、`.task/review/`、`.task/plans/`）均相对于此，**不是项目根目录下的 `.task/`**。agent prompt 中的 `.task/` 同理。
 
@@ -31,7 +31,7 @@
 
 ```
 TODO
- │ ⓪ 复杂度判断（三级：简单/普通/复杂，详见 automation.md + stage-4.1-plan.md）
+ │ ⓪ 复杂度判断（三级：简单/普通/复杂，详见 protocols/automation.md + stage-4.1-plan.md）
  ├─ 简单 ──→ ① 编码 → ② DoD ──→ DONE（simple_task_skip_cr=true 时跳过 CR）
  ├─ 普通 ──→ ① 编码 → ② DoD → ③④⑤ CR 闭环 → ⑥ 复验 → DONE
  └─ 复杂 ──→ plan/LLD（architect/planner）
@@ -44,7 +44,7 @@ TODO
 
 ### ⓪ 复杂度判定（每个任务编码前必做）
 
-Claude 基于 dev-tasks.md 任务描述 + design-consensus 改动范围判定，结果记录到 progress.md 任务行（`[简单]` / `[普通]` / `[复杂]`）。判定标准见 `automation.md「simple_task_skip_cr 协议」`。拿不准按普通处理。
+Claude 基于 dev-tasks.md 任务描述 + design-consensus 改动范围判定，结果记录到 progress.md 任务行（`[简单]` / `[普通]` / `[复杂]`）。判定标准见 `protocols/automation.md「simple_task_skip_cr 协议」`。拿不准按普通处理。
 
 ### 简单任务快速通道（需 `simple_task_skip_cr=true`）
 
@@ -104,7 +104,7 @@ Bash 命令必须可静态分析：禁止 for/while/if/case/here-doc/嵌套 $()�
 
 ### 回写完成后——自动流转
 
-> 按 automation.md「auto_advance 协议」处理：auto_advance=true 时自动取下一个 TODO 任务或自动进入阶段 5 验收，否则提示 `/devops-workflow next`。
+> 按 protocols/automation.md「auto_advance 协议」处理：auto_advance=true 时自动取下一个 TODO 任务或自动进入阶段 5 验收，否则提示 `/devops-workflow next`。
 
 ## 关键规则
 - **复杂任务编码前必须出 plan 并人工确认**：简单任务对照 design-consensus 直接编码；复杂任务先 architect/planner 出 LLD → 人工 approve → 才编码。拿不准按复杂处理（详见 `stage-4.1-plan.md`）

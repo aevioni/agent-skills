@@ -29,4 +29,4 @@
 
 **⚠️ 只有用户显式输入 `/devops-workflow approve` 才算审批通过。** 用户对设计的讨论、补充要求、确认某个细节正确、甚至说"没问题"，都不等于 approve。收到非 approve 消息时，视为反馈并据此调整设计，然后继续等待 `/devops-workflow approve`。
 
-**approve 通过后**：在 design-consensus.md 末尾追加 `## 设计确认: APPROVED`，状态置 DEVELOPING。按 automation.md「auto_advance 协议」处理：auto_advance=true 时自动进入阶段 4 开发（见 stage-4.0-dev.md），否则提示 `/devops-workflow next`。
+**approve 通过后**：在 design-consensus.md 末尾追加 `## 设计确认: APPROVED`，状态置 DEVELOPING。按 protocols/automation.md「auto_advance 协议」处理：auto_advance=true 时自动进入阶段 4 开发（见 stage-4.0-dev.md），否则提示 `/devops-workflow next`。

@@ -54,4 +54,4 @@ auto_accept_fix_max=2           # 自动修复最大轮次
 
 > 用户可手动编辑 `.workflow-config` 调整值，`/devops-workflow config` 只补缺不改已有。新增配置项（如版本升级引入）会在下次执行时自动合并。
 
-> 各配置项的行为协议详见 `automation.md`。
+> 各配置项的行为协议详见 `protocols/automation.md`。

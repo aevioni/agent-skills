@@ -15,8 +15,8 @@
    放好后回复确认，或回复"无参考文档"直接进入讨论。
    ```
 4. 用户确认后，调用 `/devops-discuss` skill，传入需求名作为讨论主题。**如 `docs/` 下有文件，在 devops-discuss prompt 中附加**：`参考文档见 {讨论根目录}{域}/{需求名}/docs/，讨论前先读取`
-5. 讨论完成并保存后，创建 `.task/progress.md`（模板见 templates.md），状态设为 `ANALYZING`
+5. 讨论完成并保存后，创建 `.task/progress.md`（模板见 protocols/templates.md），状态设为 `ANALYZING`
 6. **把该需求设为活动上下文**（写入 `{讨论根目录}.workflow-active`）
-7. 按 automation.md「auto_advance 协议」处理：auto_advance=true 时自动进入阶段 2 分析与设计，否则提示 `/devops-workflow next`
+7. 按 protocols/automation.md「auto_advance 协议」处理：auto_advance=true 时自动进入阶段 2 分析与设计，否则提示 `/devops-workflow next`
 
 **执行**：`/devops-discuss "{需求名}：{用户提供的需求描述}"`
