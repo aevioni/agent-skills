@@ -55,7 +55,8 @@ Bash 命令必须可静态分析：禁止 for/while/if/case/here-doc/嵌套 $()�
 
 两种模式均输出：逐项列 `单测 ✓ / 语法检查 ✓ / 跨模块契约 ✓ / 迁移 ✓`，输出「收尾验收通过，需求/里程碑 COMPLETED」+ 完成摘要（见下方流程完成输出）
 - 多里程碑提示用 `/devops-workflow use #{下一个里程碑}` 推进或全部完成
-- 提示用户可执行 `/devops-workflow summary` 产出交付清单
+
+> 按 protocols/automation.md「auto_summary 协议」处理：auto_summary=true 时自动执行 `/devops-workflow summary` 产出交付清单，否则提示用户可手动执行 `/devops-workflow summary`。
 
 **B. 验收不通过（FAILED，有问题项）→ 按 `auto_accept_fix` 协议分流**：
 
@@ -66,7 +67,7 @@ Bash 命令必须可静态分析：禁止 for/while/if/case/here-doc/嵌套 $()�
 - 将所有问题视为 ACCEPTED，按关联任务分组派 executor 修复
 - 修复后重新启动 verifier 做全局回归
 - 循环最多 2 轮（可配置 `auto_accept_fix_max=N`）
-- **通过** → COMPLETED
+- **通过** → COMPLETED，按 protocols/automation.md「auto_summary 协议」处理
 - **超限仍 FAILED** → 回写 `PENDING_ACCEPT_REVIEW`，走下方 B2 人工门
 
 **B2. `auto_accept_fix=false`（默认）或含 design-level 问题或自动修复超限时 → 人工确认门**：
@@ -101,7 +102,7 @@ Bash 命令必须可静态分析：禁止 for/while/if/case/here-doc/嵌套 $()�
 ### ★ approve 后修复（ACCEPT_FIXING）
 
 `/devops-workflow approve` 确认后：
-- **零问题 / 全部 REJECTED**（无需修复）→ 直接置 COMPLETED
+- **零问题 / 全部 REJECTED**（无需修复）→ 直接置 COMPLETED，按 protocols/automation.md「auto_summary 协议」处理
 - **有 ACCEPTED/MODIFIED 项** → 按关联任务分组，对每个受影响任务派单独 executor 修复（只改已采纳项），修复后重跑收尾验收（重新走本阶段完整流程）
 
 ```
