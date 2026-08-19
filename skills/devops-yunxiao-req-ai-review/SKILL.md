@@ -1,6 +1,6 @@
 ---
 name: devops-yunxiao-req-ai-review
-description: AI 自动评审云效需求并生成评审意见。调用 yunxiao-req-review 技能执行标准化评审，支持参数调用：`/yunxiao-req-ai-review space_id=xxx`，无参数时交互式询问。
+description: AI 自动评审云效需求并生成评审意见。调用 yunxiao-req-review 技能执行标准化评审，支持参数调用：`/devops-yunxiao-req-ai-review space_id=xxx`，无参数时交互式询问。
 ---
 
 # 云效 AI 需求评审
@@ -9,7 +9,7 @@ description: AI 自动评审云效需求并生成评审意见。调用 yunxiao-r
 
 本技能**必须调用 `yunxiao-req-review` 技能**执行标准化评审逻辑，不自行实现评审标准。
 
-- **评审引擎**：`/yunxiao-req-review` - 提供12项评分标准、总分计算、评级判定
+- **评审引擎**：`/devops-yunxiao-req-review` - 提供12项评分标准、总分计算、评级判定
 - **输出格式**：完整评审报告（评分明细、核心问题、改进优先级、总体评语）
 - **集成方式**：从云效获取需求详情 → 组装评审内容 → 调用 yunxiao-req-review → 回写结果到云效
 
@@ -22,8 +22,8 @@ description: AI 自动评审云效需求并生成评审意见。调用 yunxiao-r
 | `review_mode`     | 评审模式：`full` 完整评审 / `quick` 快速评审 | 否                   | `full` | `quick` |
 
 **调用方式：**
-- 参数调用：`/yunxiao-req-ai-review space_id=2c0a78d7474abf949e37f28cca max_review=50 review_mode=full`
-- 无参数调用：`/yunxiao-req-ai-review` → 交互式询问
+- 参数调用：`/devops-yunxiao-req-ai-review space_id=2c0a78d7474abf949e37f28cca max_review=50 review_mode=full`
+- 无参数调用：`/devops-yunxiao-req-ai-review` → 交互式询问
 
 **固定筛选条件（不可配置）：**
 - 状态：待处理
