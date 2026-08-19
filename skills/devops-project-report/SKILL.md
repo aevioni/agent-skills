@@ -57,8 +57,8 @@ compatibility: Python 3.8+, uv
 | bugs     | 线上故障   | `/devops-yunxiao-bug-stats space_id={space_id} range={range}`                                | —                                  |
 | req      | 需求统计   | `/devops-yunxiao-req-stats space_id={space_id} range={range}`                                | —                                  |
 | sentry   | Sentry异常 | 按分组逐组调用 `/devops-sentry-exception projects={projects} title={项目名}-{分组名}` | 多分组循环执行                     |
-| sls      | 高频接口   | `/devops-yun-sls-stats {sls 段落配置, 除 name 参数外, 所有参数均透传}`                    | 每条配置独立执行，为空则跳过该条目 |
-| slow_log | SQL慢日志  | `/devops-yun-sql-slow-log {slow_log 段落配置, 除 name 参数外, 所有参数均透传}`            | 每条配置独立执行，为空则跳过该条目 |
+| sls      | 高频接口   | `/devops-aliyun-sls-stats {sls 段落配置, 除 name 参数外, 所有参数均透传}`                    | 每条配置独立执行，为空则跳过该条目 |
+| slow_log | SQL慢日志  | `/devops-aliyun-sql-slow-log {slow_log 段落配置, 除 name 参数外, 所有参数均透传}`            | 每条配置独立执行，为空则跳过该条目 |
 
 
 
